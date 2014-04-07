@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Contact do
+  
   describe ".birthdays_today" do
 
     it 'find all contacts whose birthday is today' do
