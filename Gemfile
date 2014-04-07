@@ -51,6 +51,7 @@ group :test, :development do
   gem "database_cleaner"
   gem "pry"
   gem "timecop"
+  gem 'sms-spec'
 end
 
 group :production do
