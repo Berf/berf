@@ -39,7 +39,7 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
               user.save
           end
         else
-          if !@user.contacts.find_by(:email => entry["email"]["address"])
+          if entry["email"] && !@user.contacts.find_by(:email => entry["email"]["address"])
               user = @user.contacts.new do |u|
                 u.first_name = entry["title"].split(' ').first
                 u.last_name = entry["title"].split(' ').last
