@@ -21,7 +21,7 @@ class Contact < ActiveRecord::Base
     auth_token = ENV['TWILIO_AUTH_TOKEN']
     client = Twilio::REST::Client.new account_sid, auth_token
 
-    from = "+19172424924"
+    # from = <add your twillio number>
 
     client.account.messages.create(
       :from => from,
